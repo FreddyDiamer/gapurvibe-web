@@ -19,10 +19,8 @@ function ResetPassword() {
           className='space-y-4'
         >
           <div>
-            <h2 className='text-xl font-medium text-slate-800 dark:text-white mb-4'>
-              Восстановление пароля
-            </h2>
-            <p className='text-sm text-slate-600 dark:text-slate-400 mb-4'>
+            <h2 className='text-xl font-medium text-slate-800 mb-4'>Восстановление пароля</h2>
+            <p className='text-sm text-slate-600 mb-4'>
               Введите адрес электронной почты, и мы отправим вам инструкции для сброса пароля.
             </p>
           </div>
@@ -30,7 +28,7 @@ function ResetPassword() {
           <div>
             <label
               htmlFor='email'
-              className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+              className='block text-sm font-medium text-slate-700'
             >
               Email
             </label>
@@ -40,7 +38,7 @@ function ResetPassword() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
-              className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+              className='mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
             />
           </div>
 
@@ -78,10 +76,8 @@ function ResetPassword() {
               d='M5 13l4 4L19 7'
             />
           </svg>
-          <h2 className='mt-4 text-xl font-medium text-slate-800 dark:text-white'>
-            Проверьте вашу почту
-          </h2>
-          <p className='mt-2 text-sm text-slate-600 dark:text-slate-400'>
+          <h2 className='mt-4 text-xl font-medium text-slate-800'>Проверьте вашу почту</h2>
+          <p className='mt-2 text-sm text-slate-600'>
             Мы отправили инструкции по сбросу пароля на {email}
           </p>
           <div className='mt-6'>

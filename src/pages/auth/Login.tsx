@@ -18,7 +18,7 @@ function Login() {
       <div>
         <label
           htmlFor='email'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Email
         </label>
@@ -28,14 +28,14 @@ function Login() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
         />
       </div>
 
       <div>
         <label
           htmlFor='password'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Пароль
         </label>
@@ -45,7 +45,7 @@ function Login() {
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
         />
       </div>
 
@@ -58,7 +58,7 @@ function Login() {
           />
           <label
             htmlFor='remember-me'
-            className='ml-2 block text-sm text-slate-700 dark:text-slate-300'
+            className='ml-2 block text-sm text-slate-700'
           >
             Запомнить меня
           </label>
@@ -82,7 +82,7 @@ function Login() {
       </div>
 
       <div className='text-center mt-4'>
-        <span className='text-sm text-slate-600 dark:text-slate-400'>Нет аккаунта? </span>
+        <span className='text-sm text-slate-600'>Нет аккаунта? </span>
         <Link
           to='/auth/register'
           className='text-sm font-medium text-blue-600 hover:text-blue-500'

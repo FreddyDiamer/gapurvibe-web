@@ -8,9 +8,9 @@ import AuthLayout from '@/shared/components/layouts/AuthLayout'
 const HomePage = lazy(() => import('@/pages/home'))
 const AboutPage = lazy(() => import('@/pages/about'))
 const NotFoundPage = lazy(() => import('@/pages/not-found'))
-const LoginPage = lazy(() => import('@/pages/Login'))
-const RegisterPage = lazy(() => import('@/pages/Register'))
-const ResetPasswordPage = lazy(() => import('@/pages/ResetPassword'))
+const LoginPage = lazy(() => import('@/pages/auth/Login'))
+const RegisterPage = lazy(() => import('@/pages/auth/Register'))
+const ResetPasswordPage = lazy(() => import('@/pages/auth/ResetPassword'))
 
 const router = createBrowserRouter([
   {

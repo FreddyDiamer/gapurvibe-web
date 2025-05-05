@@ -20,7 +20,7 @@ function Register() {
       <div>
         <label
           htmlFor='name'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Имя
         </label>
@@ -30,14 +30,14 @@ function Register() {
           value={name}
           onChange={e => setName(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white'
         />
       </div>
 
       <div>
         <label
           htmlFor='email'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Email
         </label>
@@ -47,14 +47,14 @@ function Register() {
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white'
         />
       </div>
 
       <div>
         <label
           htmlFor='password'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Пароль
         </label>
@@ -64,14 +64,14 @@ function Register() {
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white'
         />
       </div>
 
       <div>
         <label
           htmlFor='confirmPassword'
-          className='block text-sm font-medium text-slate-700 dark:text-slate-300'
+          className='block text-sm font-medium text-slate-700'
         >
           Подтвердите пароль
         </label>
@@ -81,7 +81,7 @@ function Register() {
           value={confirmPassword}
           onChange={e => setConfirmPassword(e.target.value)}
           required
-          className='mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500'
+          className='mt-1 block w-full px-3 py-2 bg-white'
         />
       </div>
 
@@ -95,7 +95,7 @@ function Register() {
       </div>
 
       <div className='text-center mt-4'>
-        <span className='text-sm text-slate-600 dark:text-slate-400'>Уже есть аккаунт? </span>
+        <span className='text-sm text-slate-600'>Уже есть аккаунт? </span>
         <Link
           to='/auth/login'
           className='text-sm font-medium text-blue-600 hover:text-blue-500'
