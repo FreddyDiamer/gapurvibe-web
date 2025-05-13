@@ -6,7 +6,7 @@ import { LoadingSpinner } from '@/shared/components/ui'
 import AuthLayout from '@/shared/components/layouts/AuthLayout'
 
 const HomePage = lazy(() => import('@/pages/home'))
-const AboutPage = lazy(() => import('@/pages/about'))
+const PlacesPage = lazy(() => import('@/pages/places'))
 const NotFoundPage = lazy(() => import('@/pages/not-found'))
 const LoginPage = lazy(() => import('@/pages/auth/Login'))
 const RegisterPage = lazy(() => import('@/pages/auth/Register'))
@@ -26,10 +26,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: 'about',
+        path: 'places',
         element: (
           <Suspense fallback={<LoadingSpinner />}>
-            <AboutPage />
+            <PlacesPage />
           </Suspense>
         ),
       },

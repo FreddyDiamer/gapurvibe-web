@@ -1,0 +1,75 @@
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+
+    // Основные варианты
+    &-primary {
+      @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+    }
+
+    &-secondary {
+      @apply bg-slate-200 text-slate-800 hover:bg-slate-300 focus:ring-slate-300;
+    }
+
+    &-danger {
+      @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+    }
+
+    &-success {
+      @apply bg-green-500 text-white hover:bg-green-600 focus:ring-green-500;
+    }
+
+    // Размеры
+    &-sm {
+      @apply px-2 py-1 text-sm;
+    }
+
+    &-lg {
+      @apply px-6 py-3 text-lg;
+    }
+
+    // Варианты контура
+    &-outline {
+      @apply bg-transparent border;
+
+      &-primary {
+        @apply text-blue-500 border-blue-500 hover:bg-blue-50;
+      }
+
+      &-secondary {
+        @apply text-slate-600 border-slate-300 hover:bg-slate-50;
+      }
+
+      &-danger {
+        @apply text-red-500 border-red-500 hover:bg-red-50;
+      }
+    }
+
+    // Иконки внутри кнопок
+    &-icon {
+      @apply inline-flex items-center;
+
+      svg {
+        @apply w-5 h-5;
+      }
+
+      &-only {
+        @apply p-2;
+
+        svg {
+          @apply m-0;
+        }
+      }
+    }
+
+    // Полная ширина
+    &-full {
+      @apply w-full flex justify-center;
+    }
+
+    // Состояние отключения
+    &:disabled {
+      @apply opacity-60 cursor-not-allowed;
+    }
+  }
+}

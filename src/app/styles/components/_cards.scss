@@ -1,0 +1,90 @@
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow overflow-hidden;
+
+    &-sm {
+      @apply p-3;
+    }
+
+    &-md {
+      @apply p-5;
+    }
+
+    &-lg {
+      @apply p-7;
+    }
+
+    &-header {
+      @apply px-5 py-4 border-b border-slate-200;
+    }
+
+    &-body {
+      @apply p-5;
+    }
+
+    &-footer {
+      @apply px-5 py-4 bg-slate-50 border-t border-slate-200;
+    }
+
+    &-bordered {
+      @apply border border-slate-200;
+
+      &-primary {
+        @apply border-l-4 border-l-blue-500;
+      }
+
+      &-success {
+        @apply border-l-4 border-l-green-500;
+      }
+
+      &-warning {
+        @apply border-l-4 border-l-yellow-500;
+      }
+
+      &-danger {
+        @apply border-l-4 border-l-red-500;
+      }
+    }
+
+    &-hover {
+      @apply transition-all duration-200 hover:shadow-md;
+    }
+
+    &-clickable {
+      @apply cursor-pointer transition-all duration-200 hover:shadow-md hover:translate-y-[-2px];
+    }
+  }
+
+  .divider {
+    @apply w-full h-px bg-slate-200 my-4;
+
+    &-text {
+      @apply relative flex items-center;
+
+      &:before,
+      &:after {
+        @apply content-[''] flex-1 h-px bg-slate-200;
+      }
+
+      &:before {
+        @apply mr-3;
+      }
+
+      &:after {
+        @apply ml-3;
+      }
+    }
+  }
+
+  .panel {
+    @apply bg-white rounded-lg p-5;
+
+    &-bordered {
+      @apply border border-slate-200;
+    }
+
+    &-shadowed {
+      @apply shadow;
+    }
+  }
+}

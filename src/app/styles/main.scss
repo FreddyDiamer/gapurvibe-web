@@ -1,3 +1,7 @@
+@use 'components/buttons';
+@use 'components/inputs';
+@use 'components/cards';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,15 +27,4 @@
 
 // Custom components
 @layer components {
-  .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors;
-
-    &-primary {
-      @apply bg-blue-500 text-white hover:bg-blue-600;
-    }
-
-    &-secondary {
-      @apply bg-slate-200 text-slate-800 hover:bg-slate-300;
-    }
-  }
 }

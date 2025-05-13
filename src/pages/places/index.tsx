@@ -1,11 +1,7 @@
-import { useCountStore } from '@/stores'
-
-const AboutPage = () => {
-  const { count } = useCountStore()
-
+const PlacesPage = () => {
   return (
     <div>
-      <h1 className='text-3xl font-bold mb-6'>About Page {count}</h1>
+      <h1 className='text-3xl font-bold mb-6'>All Places</h1>
 
       <div className='bg-white p-6 rounded-lg shadow max-w-2xl'>
         <h2 className='text-xl font-semibold mb-4'>Feature-Sliced Design</h2>
@@ -33,9 +29,11 @@ const AboutPage = () => {
           <li>Zod for schema validation</li>
           <li>SCSS and Tailwind CSS for styling</li>
         </ul>
+
+        <button className='btn btn-danger'>fsd</button>
       </div>
     </div>
   )
 }
 
-export default AboutPage
+export default PlacesPage
