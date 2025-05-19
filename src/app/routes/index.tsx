@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
-import { Layout } from '@/shared/components/layouts/AppLayout'
+import AppLayout from '@/app/layouts/AppLayout'
+import AuthLayout from '@/app/layouts/AuthLayout'
 import { LoadingSpinner } from '@/shared/components/ui'
-import AuthLayout from '@/shared/components/layouts/AuthLayout'
 
 const HomePage = lazy(() => import('@/pages/home'))
 const PlacesPage = lazy(() => import('@/pages/places'))
+const CreatePlacePage = lazy(() => import('@/pages/places/create'))
 const NotFoundPage = lazy(() => import('@/pages/not-found'))
 const LoginPage = lazy(() => import('@/pages/auth/Login'))
 const RegisterPage = lazy(() => import('@/pages/auth/Register'))
@@ -15,7 +16,7 @@ const ResetPasswordPage = lazy(() => import('@/pages/auth/ResetPassword'))
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: <AppLayout />,
     children: [
       {
         index: true,
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingSpinner />}>
             <PlacesPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'places/create',
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <CreatePlacePage />
           </Suspense>
         ),
       },

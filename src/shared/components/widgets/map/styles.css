@@ -1,0 +1,7 @@
+.map-container {
+  @apply size-full;
+}
+
+.leaflet-bottom.leaflet-right {
+  @apply hidden;
+}

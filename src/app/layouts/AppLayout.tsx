@@ -1,10 +1,17 @@
+import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-export const Layout = () => {
+const AppLayout = () => {
+  const [fullWidthScreen, setFullWidthScreen] = useState(false)
+
   const navLinks = [
     {
       to: '/places',
       label: 'Places',
+    },
+    {
+      to: '/places/create',
+      label: 'Create Place',
     },
   ]
 
@@ -36,16 +43,18 @@ export const Layout = () => {
       </header>
 
       <main className='flex-grow'>
-        <div className='container mx-auto px-4 py-8'>
-          <Outlet />
+        <div className={fullWidthScreen ? '' : 'container mx-auto px-4 py-8'}>
+          <Outlet context={{ fullWidthScreen, setFullWidthScreen }} />
         </div>
       </main>
 
       <footer className='bg-white shadow-inner'>
         <div className='container mx-auto px-4 py-4 text-center text-slate-500'>
-          &copy; {new Date().getFullYear()} AppName. All rights reserved.
+          &copy; {new Date().getFullYear()} GapurVibe. All rights reserved.
         </div>
       </footer>
     </div>
   )
 }
+
+export default AppLayout

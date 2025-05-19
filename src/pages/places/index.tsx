@@ -1,37 +1,55 @@
+import { Map, type MapPoint } from '@components/widgets'
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import useLayoutContext from '@/shared/hooks/useLayoutContext'
+
+const EXAMPLE_POINTS: MapPoint[] = [
+  {
+    id: 1,
+    position: [55.751244, 37.618423],
+    title: 'Москва',
+    description: 'Столица России',
+  },
+  {
+    id: 4,
+    position: [55.951244, 37.618423],
+    title: 'Москва',
+    description: 'Столица России',
+  },
+  {
+    id: 2,
+    position: [59.9343, 30.3351],
+    title: 'Санкт-Петербург',
+    description: 'Культурная столица России',
+  },
+  {
+    id: 3,
+    position: [56.8519, 60.6122],
+    title: 'Екатеринбург',
+    description: 'Столица Урала',
+  },
+]
+
 const PlacesPage = () => {
+  const { setFullWidthScreen } = useLayoutContext()
+
+  useEffect(() => {
+    setFullWidthScreen(true)
+
+    return () => {
+      setFullWidthScreen(false)
+    }
+  }, [setFullWidthScreen])
+
   return (
-    <div>
-      <h1 className='text-3xl font-bold mb-6'>All Places</h1>
+    <div className='flex flex-col h-screen'>
+      <h1 className='text-3xl font-bold'>All Places</h1>
 
-      <div className='bg-white p-6 rounded-lg shadow max-w-2xl'>
-        <h2 className='text-xl font-semibold mb-4'>Feature-Sliced Design</h2>
-        <p className='mb-4 text-slate-600'>
-          This application is built using the Feature-Sliced Design (FSD) methodology, which is a
-          structural methodology for frontend applications.
-        </p>
-
-        <h3 className='text-lg font-semibold mb-2'>Key Features:</h3>
-        <ul className='list-disc pl-6 mb-4 text-slate-600'>
-          <li>Scalable architecture</li>
-          <li>Clear separation of concerns</li>
-          <li>Strong boundaries between slices</li>
-          <li>Decoupled development experience</li>
-          <li>Project adaptability</li>
-        </ul>
-
-        <h3 className='text-lg font-semibold mb-2'>Technologies Used:</h3>
-        <ul className='list-disc pl-6 text-slate-600'>
-          <li>React + TypeScript</li>
-          <li>Vite + SWC for fast builds</li>
-          <li>Zustand for state management</li>
-          <li>React Router for navigation</li>
-          <li>React Query for data fetching</li>
-          <li>Zod for schema validation</li>
-          <li>SCSS and Tailwind CSS for styling</li>
-        </ul>
-
-        <button className='btn btn-danger'>fsd</button>
-      </div>
+      <Map
+        points={EXAMPLE_POINTS}
+        center={[57.7, 37.6]}
+        zoom={5}
+      />
     </div>
   )
 }
